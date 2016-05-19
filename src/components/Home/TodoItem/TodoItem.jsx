@@ -1,9 +1,5 @@
-/**
- * Created by xmityaz on 22.04.16.
- */
-
 import React, { PropTypes } from 'react';
-import styles from './TodoItem.css';
+require('./TodoItem.scss');
 
 const propTypes = {
   children: PropTypes.string,
@@ -13,15 +9,15 @@ const propTypes = {
 };
 
 function TodoItem({ children, completed, onComplete, onRemove }) {
-  let className = styles.todoItem;
+  let className = "todoItem";
 
   if (completed) {
-    className += ` ${styles.completed}`;
+    className += " completed";
   }
   return (
     <div className={className} onClick={onComplete}>
       {children}
-      <button onClick={onRemove} className={styles.close}>x</button>
+      <button onClick={onRemove} className="close">x</button>
     </div>
   )
 }

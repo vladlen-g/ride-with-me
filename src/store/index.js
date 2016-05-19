@@ -1,7 +1,3 @@
-/**
- * Created by xmityaz on 12.04.16.
- */
-
 import { createStore } from 'redux';
 import rootReducer from '../reducers'
 

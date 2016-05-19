@@ -1,7 +1,3 @@
-/**
- * Created by xmityaz on 22.04.16.
- */
-
 import { createAction } from 'redux-actions';
 import * as types from '../constants/todos';
 

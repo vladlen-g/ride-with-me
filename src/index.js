@@ -1,7 +1,3 @@
-/**
- * Created by xmityaz on 12.04.16.
- */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';

@@ -1,7 +1,3 @@
-/**
- * Created by xmityaz on 22.04.16.
- */
-
 import React, { Component, PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -9,7 +5,7 @@ import { addTodo, removeTodo, completeTodo, clearCompleted } from '../../actions
 import TodoItem from '../../components/Home/TodoItem/TodoItem';
 import Footer from '../../components/Home/Footer/Footer';
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE} from '../../constants/filters';
-import styles from './Home.css';
+require('./Home.scss');
 
 const propTypes = {
   todos: PropTypes.array.isRequired,
@@ -47,10 +43,10 @@ class Home extends Component {
     const filteredTodos = this.props.todos.filter(filterHandlers[this.state.filter]);
 
     return (
-      <div className={styles.home}>
+      <div className="home">
         <input
           onKeyDown={this.onKeyDown}
-          className={styles.todoInput}
+          className="todoInput"
           placeholder="What needs to be done?"
         />
 

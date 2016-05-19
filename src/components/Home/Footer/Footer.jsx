@@ -1,10 +1,6 @@
-/**
- * Created by xmityaz on 22.04.16.
- */
-
 import React, { PropTypes } from 'react';
 import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../../../constants/filters';
-import styles from './Footer.css';
+require('./Footer.scss');
 
 const propTypes = {
   filter: PropTypes.string,
@@ -21,11 +17,11 @@ const filterTitles = {
 
 function Footer({ filter, onClearCompleted, onFilterChange }) {
   return (
-    <div className={styles.footer}>
-      <div className={styles.filter}>
+    <div className="footer">
+      <div className="filter">
         {filters.map(item =>
           <div
-            className={styles.filterItem + (item === filter ? ` ${styles.selected}` : '')}
+            className={"filterItem" + (item === filter ? " selected" : "")}
             key={item}
             onClick={onFilterChange.bind(null, item)}
           >
@@ -35,7 +31,7 @@ function Footer({ filter, onClearCompleted, onFilterChange }) {
       </div>
 
       <button
-        className={styles.clearCompleted}
+        className="clearCompleted"
         onClick={onClearCompleted}
       >
         Clear completed

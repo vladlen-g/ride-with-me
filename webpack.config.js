@@ -1,7 +1,3 @@
-/**
- * Created by xmityaz on 12.04.16.
- */
-
 const webpack = require('webpack');
 const path = require('path');
 const autoprefixer = require('autoprefixer');
@@ -31,14 +27,10 @@ module.exports = {
         loaders: ['react-hot', 'babel']
       },
       {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader?modules', 'postcss-loader']
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
       }
     ]
-  },
-
-  postcss: function () {
-    return [autoprefixer];
   },
 
   resolve: {
